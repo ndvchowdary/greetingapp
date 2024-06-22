@@ -1,9 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayan's Moderate HTML Page</title>
+    <title>Welcome to Nani and Nayan's Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,79 +19,67 @@
             padding: 10px 0;
             text-align: center;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-        }
-        nav a {
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             padding: 20px;
+            text-align: center;
         }
-        .content {
+        form {
             background-color: #fff;
-            margin: 10px;
             padding: 20px;
+            margin: 0 auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            max-width: 600px;
+            display: inline-block;
         }
-        footer {
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
             background-color: #333;
             color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to Nayan's Website</h1>
+        <h1>Welcome to Nani and Nayan's Website</h1>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
     <div class="container">
-        <div class="content">
-            <h2>Home</h2>
-            <p>This is the home section of Nayan's webpage. You can include any introductory information here.</p>
-        </div>
-        <div class="content">
-            <h2>About</h2>
-            <p>This section is about Nayan or the website. You can provide background information here.</p>
-        </div>
-        <div class="content">
-            <h2>Services</h2>
-            <p>Here you can list the services provided by Nayan's business or the purpose of the website.</p>
-        </div>
-        <div class="content">
-            <h2>Contact</h2>
-            <p>Include Nayan's contact information here so visitors can get in touch with you.</p>
-        </div>
-    </div>
+        <form action="index.jsp" method="post">
+            <h2>Enter Your Name</h2>
+            <input type="text" name="username" placeholder="Your Name">
+            <input type="submit" value="Submit">
+        </form>
 
-    <footer>
-        <p>&copy; 2024 Nayan's Website</p>
-    </footer>
+        <% 
+            String username = request.getParameter("username");
+            if (username != null && !username.trim().isEmpty()) {
+                if (username.equalsIgnoreCase("Nani")) {
+        %>
+                    <h2>Hello, Nani! Welcome to your special page!</h2>
+        <% 
+                } else if (username.equalsIgnoreCase("Nayan")) {
+        %>
+                    <h2>Hello, Nayan! Welcome to your special page!</h2>
+        <% 
+                } else {
+        %>
+                    <h2>Hello, <%= username %>! Welcome to the website!</h2>
+        <% 
+                }
+            }
+        %>
+    </div>
 
 </body>
 </html>

@@ -13,6 +13,8 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <sonar.host.url>http://172.31.54.232:9000</sonar.host.url>
+        <!-- Replace with your actual SonarQube login token -->
+        <sonar.login>sqa_cb5cda0ae99af448f6db4a6840625ffd5d5f9144</sonar.login>
     </properties>
 
     <dependencies>
@@ -48,6 +50,13 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+
+            <!-- SonarQube Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>4.0.0.4121</version>
+            </plugin>
         </plugins>
     </build>
     
@@ -63,5 +72,6 @@
         </repository>
     </distributionManagement>
 </project>
+
 
 

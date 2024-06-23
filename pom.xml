@@ -12,7 +12,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <sonar.host.url>http://100.26.157.151:9000</sonar.host.url>
+        <sonar.host.url>http://172.31.54.232:9000</sonar.host.url>
     </properties>
 
     <dependencies>
@@ -54,12 +54,12 @@
     <distributionManagement>
         <snapshotRepository>
             <id>nexusRepo</id>
-            <url>http://3.81.137.102:8081/repository/sample-snapshots/</url>
+            <url>http://172.31.33.1:8081/repository/sample-snapshots/</url>
         </snapshotRepository>
 
         <repository>
             <id>nexusRepo</id>
-            <url>http://3.81.137.102:8081/repository/sample-releases/</url>
+            <url>http://172.31.33.1/repository/sample-releases/</url>
         </repository>
     </distributionManagement>
 </project>

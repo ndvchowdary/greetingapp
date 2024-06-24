@@ -1,64 +1,76 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAYAN_SAI's Page</title>
+    <title>Family Page</title>
     <style>
         body {
-            background-color: #f0f8ff;
-            color: #000080;
             font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-        h2 {
-            color: #4682b4;
+        header {
+            background-color: #ff7f50;
+            color: white;
             text-align: center;
-            margin-top: 50px;
+            padding: 1em 0;
         }
-        .poem {
-            border: 2px solid #4682b4;
-            padding: 20px;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+        }
+        .card {
+            background-color: #ffebcd;
+            border: 2px solid #ffa07a;
             border-radius: 10px;
-            background-color: #ffffff;
-            margin: 20px auto;
-            width: 80%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .poem h3 {
+            margin: 1em;
+            padding: 2em;
+            width: 250px;
             text-align: center;
-            color: #5f9ea0;
         }
-        .poem p {
-            text-align: justify;
+        .card h2 {
+            color: #8b4513;
+        }
+        .card p {
             color: #2f4f4f;
         }
     </style>
 </head>
 <body>
-    <h2>NDVCHOWDARY</h2>
-    <div class="poem">
-        <h3>Hi Nani, How Are You?</h3>
-        <p>
-            In the morning light so new, <br>
-            I think of friends like you, <br>
-            Wondering if the skies are blue, <br>
-            And if your heart is happy too.
-        </p>
-        <p>
-            The days go by, the seasons change, <br>
-            But friendship stays, it’s never strange. <br>
-            Through highs and lows, and all we do, <br>
-            I'm always here, thinking of you.
-        </p>
-        <p>
-            So here's a note, so short and sweet, <br>
-            Hoping soon again we'll meet. <br>
-            Until that day, stay strong, stay true, <br>
-            Hi Nani, how are you?
-        </p>
+    <header>
+        <h1>Welcome to Our Family Page</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Nani</h2>
+            <p>Name: Nani</p>
+            <p>Role: Grandmother</p>
+            <p>Hobbies: Cooking, Gardening, Reading</p>
+        </div>
+        <div class="card">
+            <h2>Nayan Sai</h2>
+            <p>Name: Nayan Sai</p>
+            <p>Role: Nephew</p>
+            <p>Hobbies: Playing Video Games, Football, Drawing</p>
+        </div>
+        <div class="card">
+            <h2>Ramya</h2>
+            <p>Name: Ramya</p>
+            <p>Role: Sister</p>
+            <p>Hobbies: Painting, Traveling, Music</p>
+        </div>
+        <div class="card">
+            <h2>Rajesh</h2>
+            <p>Name: Rajesh</p>
+            <p>Role: Sister's Husband</p>
+            <p>Hobbies: Reading, Cycling, Chess</p>
+        </div>
     </div>
 </body>
 </html>

@@ -12,7 +12,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <sonar.host.url>http://172.31.54.232:9000</sonar.host.url>
+        <sonar.host.url>http://54.224.41.43:9000</sonar.host.url>
         <!-- Replace with your actual SonarQube login token -->
         <sonar.login>sqa_cb5cda0ae99af448f6db4a6840625ffd5d5f9144</sonar.login>
     </properties>
@@ -63,12 +63,12 @@
     <distributionManagement>
         <snapshotRepository>
             <id>nexusRepo</id>
-            <url>http://54.174.11.246:8081/repository/sample-snapshots</url>
+            <url>http://3.81.8.32:8081/repository/sample-snapshots</url>
         </snapshotRepository>
 
         <repository>
             <id>nexusRepo</id>
-            <url>http://54.174.11.246:8081/repository/sample-releases</url>
+            <url>http://3.81.8.32:8081/repository/sample-releases</url>
         </repository>
     </distributionManagement>
 </project>
